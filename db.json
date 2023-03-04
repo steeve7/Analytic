@@ -1,0 +1,23 @@
+{
+  "countries":[
+    {
+  "ISO3": "NGA",
+  "name": "Nigeria",
+  "region": "EMEA",
+  "population_density": "4234923"
+}
+  ],
+  "continent":[
+    {
+  "continent": "EMEA",
+  "average": "240000"
+}
+  ]
+}
+
+
+
+
+
+
+
