@@ -9,7 +9,7 @@ const index = () => {
     <footer className="w-full" style={{background: "rgba(255, 255, 255, 0.1)"}}>
     <div className="flex md:flex-row mt-10 w-full ">
       <section className="md:m-20">
-        <a href="#" className="flex items-center m-2 md:m-0 mt-2">
+        <a href="/#" className="flex items-center m-2 md:m-0 mt-2">
           <img src={Logo} alt="header-icon" className="w-40" />
         </a>
         <div className='text-white py-4'>
@@ -39,13 +39,13 @@ const index = () => {
         <div className='leading-8'>
           <h2 className="font-bold">Support</h2>
           <ul>
-            <a href="#">
+            <a href="/#">
               <li>FAQS</li>
             </a>
-            <a href="#">
+            <a href="/#">
               <li>Privacy Policy</li>
             </a>
-            <a href="#">
+            <a href="/#">
               <li>Terms Of Service</li>
             </a>
           </ul>
@@ -53,21 +53,21 @@ const index = () => {
         <div className='leading-8'>
           <h2 className="font-bold">Lets Chat!</h2>
           <ul>
-            <a href="#">
+            <a href="/#">
               <li>hernalytics@gmail.com</li>
             </a>
-            <a href="#">
+            <a href="/#">
               <li>+2348012345678</li>
             </a>
           </ul>
           <div className="flex mt-5 space-x-2">
-            <a href="&apos;">
+            <a href="/#">
               <CgInstagram className="bg-orange-400 w-8 rounded-full h-8 text-white p-2" />
             </a>
-            <a href="&apos;">
+            <a href="/#">
               <TiSocialTwitter className="bg-blue-500 w-8 rounded-full h-8 text-white p-2" />
             </a>
-            <a href="&apos;">
+            <a href="/#">
             <MdCall className="bg-orange-400 w-8 rounded-full h-8 text-white p-2" />
             </a>
           </div>

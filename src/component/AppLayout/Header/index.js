@@ -21,7 +21,7 @@ const Index = () => {
             </div>
             <ul className='md:flex hidden uppercase items-center gap-8 font-[Poppins] text-white'>
                 <li>
-                    <a href="#" className="py-7 px-3 inline-block">
+                    <a href="/#" className="py-7 px-3 inline-block">
                         About us
                     </a>
                 </li>
@@ -34,7 +34,7 @@ const Index = () => {
             <ul className={`
             md:hidden bg-white absolute w-full bottom-0 py-24 pl-4 duration-500 ${open ? "left-0" : "left-[-100%]"}`}>
                 <li>
-                    <a href='#' className="py-7 px-3 inline-block">
+                    <a href='/#' className="py-7 px-3 inline-block">
                     About us
                     </a>
                 </li>
