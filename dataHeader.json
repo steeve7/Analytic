@@ -1,0 +1,22 @@
+{
+    "candidate":[
+      {
+        "political_party_name": "Labour Party",
+        "full_name": "Peter Obi",
+        "candidate_id": "01gsxaa3v52mbr3aspbjn4w9bh",
+        "candidates_vote": 131453
+    },
+    {
+        "political_party_name": "People's Democratic Party",
+        "full_name": "Tinubu",
+        "candidate_id": "01gsxaarzz4gnvqykbb3ryewja",
+        "candidates_vote": 6220
+    }, 
+    {
+        "political_party_name": "All Progressives Congress",
+        "full_name": "Atiku",
+        "candidate_id": "01gsxab585djcfcneefkpten1r",
+        "candidates_vote": 2125
+    }  
+    ] 
+}
