@@ -10,7 +10,7 @@ const Index = () => {
   const [candidates, setCandidate] = useState([]);
 
   const getData = () => {
-    fetch("http://localhost:3001/candidate",{
+    fetch("https://elect-her.herokuapp.com/api/v1/elections/candidate-total-votes?type=president",{
         header:{
             "Content-Type": 'application/json',
             "Accept": 'application/json'
