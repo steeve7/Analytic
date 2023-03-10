@@ -7,15 +7,120 @@ import Female from './assest/Vector(10).png'
 
 
 const Index = () => {
+    
     const [abias, setAbia] = useState([]);
-    const [adamawas, setAdamawa] = useState([]);
-    const [anambras, setAnambra] = useState([]);
-    const [crosss, setCross] = useState([]);
-    const [lagoss, setLagos] = useState([]);
-    const [riverss, setRivers] = useState([]);
+
+    const object = [
+        {
+            state_name: "ABIA",
+            political_party_name: "Labour Party",
+            candidate_votes: 6010
+        },
+        {
+            state_name: "ABIA",
+            political_party_name: "People's Democratic Party",
+            candidate_votes: 200
+        },
+        {
+            state_name: "ABIA",
+            political_party_name: "All Progressive Congress",
+            candidate_votes: 40
+        },
+    ]
+    const adamawas = [
+        {
+            state_name: "ADAMAWA",
+            political_party_name: "People's Democratic Party",
+            candidate_votes: 6000
+        },
+        {
+            state_name: "ADAMAWA",
+            political_party_name: "Labour Party",
+            candidate_votes: 4000
+        },
+        {
+            state_name: "ADAMAWA",
+            political_party_name: "All Progressive Congress",
+            candidate_votes: 2000
+        },
+    ]
+
+    const anambras = [
+{
+            state_name: "ANAMBRA",
+            political_party_name: "Labour Party",
+            candidate_votes: 30000
+        },
+        {
+            state_name: "ANAMBRA",
+            political_party_name: "All Progressive Congress",
+            candidate_votes: 1
+        },
+        {
+            state_name: "ANAMBRA",
+            political_party_name: "People's Democratic Party",
+            candidate_votes: 0
+        },
+    ]
+
+    const crosss = [
+        {
+            state_name: "CROSS RIVER",
+            political_party_name: "Labour Party",
+            candidate_votes: 90900
+        },
+        {
+            state_name: "CROSS RIVER",
+            political_party_name: "People's Democratic Party",
+            candidate_votes: 9
+        },
+        {
+            state_name: "CROSS RIVER",
+            political_party_name: "All Progressive Congress",
+            candidate_votes: 9
+        },
+    ]
+
+    const lagoss = [
+         {
+            state_name: "LAGOS",
+            political_party_name: "Labour Party",
+            candidate_votes: 220
+        },
+        {
+            state_name: "LAGOS",
+            political_party_name: "All Progressive Congress",
+            candidate_votes: 74
+        },
+        {
+            state_name: "LAGOS",
+            political_party_name: "People's Democratic Party",
+            candidate_votes: 6
+        },
+    ]
+      const riverss = [
+        {
+            state_name: "RIVERS",
+            political_party_name: "Labour Party",
+            candidate_votes: 323
+        },
+        {
+            state_name: "RIVERS",
+            political_party_name: "People's Democratic Party",
+            candidate_votes: 5
+        },
+        {
+            state_name: "RIVERS",
+            political_party_name: "All Progressive Congress",
+            candidate_votes: 1
+        }
+      ] 
+
+    
+   
 
     const getData = () => {
-        fetch("http://localhost:30001/Abia",{
+        fetch("https://elect-her.herokuapp.com/api/v1/elections/candidate-total-votes?type=state_result",{
             header:{
                 "Content-Type": 'application/json',
                 "Accept": 'application/json'
@@ -23,60 +128,14 @@ const Index = () => {
         }).then((res) => res.json())
         .then((data) => {setAbia(data)})
     }
-    const getState = () => {
-        fetch("http://localhost:30001/Adamawa",{
-            header:{
-                "Content-Type": 'application/json',
-                "Accept": 'application/json'
-            }
-        }).then((res) => res.json())
-        .then((data) => {setAdamawa(data)})
-    }
-    const getAnambra = () => {
-        fetch("http://localhost:30001/Anambra",{
-            header:{
-                "Content-Type": 'application/json',
-                "Accept": 'application/json'
-            }
-        }).then((res) => res.json())
-        .then((data) => {setAnambra(data)})
-    }
-    const getCross = () => {
-        fetch("http://localhost:30001/CrossRiver",{
-            header:{
-                "Content-Type": 'application/json',
-                "Accept": 'application/json'
-            }
-        }).then((res) => res.json())
-        .then((data) => {setCross(data)})
-    }
-    const getLagos = () => {
-        fetch("http://localhost:30001/Lagos",{
-            header:{
-                "Content-Type": 'application/json',
-                "Accept": 'application/json'
-            }
-        }).then((res) => res.json())
-        .then((data) => {setLagos(data)})
-    }
-    const getRivers = () => {
-        fetch("http://localhost:30001/Rivers",{
-            header:{
-                "Content-Type": 'application/json',
-                "Accept": 'application/json'
-            }
-        }).then((res) => res.json())
-        .then((data) => {setRivers(data)})
-    }
+
 
     useEffect(()=> {
         getData();
-        getState();
-        getAnambra();
-        getCross();
-        getLagos();
-        getRivers();
+        
     },[])
+
+    Object.entries(abias).map((x) => console.log(x));
 
   return (
     <section className='flex justify-content m-auto items-center border-gray-700 mt-20 border w-[90%] shadow-lg py-20'>
@@ -106,73 +165,79 @@ const Index = () => {
             <h1 className="font-bold text-[12px]">ABIA STATE</h1>
             </div>
             <div className='flex items-center space-x-2'>
-                {abias.map((abia, index) => (
-                    <div className='space-x-2 text-center' key={index}>                   
-                    <p>{abia.political_party_name}</p>
-                    <p>{abia.candidate_votes}</p>
-                    </div>
-                ))}
+            {object.map((abia, index) => (
+                <div className='space-x-2 text-center' key={index}>                   
+                <p>{abia.political_party_name}</p>
+                <p>{abia.candidate_votes}</p>
+                </div>
+            ))}
+        </div> 
+        <div className='flex items-center space-x-2'>
+        <div className='bg-[#E30325] w-[20px] h-[10px] relative'/>
+        <h1 className="font-bold text-[12px]">ADAMAWA STATE</h1>
+        </div>
+        <div className='flex items-center space-x-2'>
+            {adamawas.map((adamawa, index) => (
+                <div className='space-x-2 text-center' key={index}>
+                <p>{adamawa.political_party_name}</p>
+                <p>{adamawa.candidate_votes}</p>
+                </div>
+            ))}
+        </div>
+        <div className='flex items-center space-x-2'>
+        <div className='bg-[#449352] w-[20px] h-[10px] relative'/>
+        <h1 className="font-bold text-[12px] uppercase">anambra state</h1>
+        </div>
+        <div className='flex items-center space-x-2'>
+            {anambras.map((anambra, index) => (
+                <div className='space-x-2 text-center' key={index}>
+                <p>{anambra.political_party_name}</p>
+                <p>{anambra.candidate_votes}</p>
+                </div>
+            ))}
+        </div> 
+        <div className='flex items-center space-x-2'>
+        <div className='bg-[#449352] w-[20px] h-[10px] relative'/>
+        <h1 className="font-bold text-[12px] uppercase">Cross River state</h1>
+        </div>
+        <div className='flex items-center space-x-2'>
+            {crosss.map((cross, index) => (
+                <div className='space-x-2 text-center' key={index}>
+                <p>{cross.political_party_name}</p>
+                <p>{cross.candidate_votes}</p>
+                </div>
+            ))}
+        </div> 
+        <div className='flex items-center space-x-2'>
+        <div className='bg-[#449352] w-[20px] h-[10px] relative'/>
+        <h1 className="font-bold text-[12px] uppercase">Lagos state</h1>
+        </div>
+        <div className='flex items-center space-x-2'>
+            {lagoss.map((lagos, index) => (
+                <div className='space-x-2 text-center'>
+                <p>{lagos.political_party_name}</p>
+                <p>{lagos.candidate_votes}</p>
+                </div>
+            ))}
+        </div>
+        <div className='flex items-center space-x-2'>
+        <div className='bg-[#449352] w-[20px] h-[10px] relative'/>
+        <h1 className="font-bold text-[12px] uppercase">Rivers state</h1>
+        </div>  
+        <div className='flex items-center space-x-2'>
+            {riverss.map((river, index) => (
+                <div className='space-x-2 text-center'key={index}>
+                <p>{river.political_party_name}</p>
+                <p>{river.candidate_votes}</p>
+                </div>
+            ))}
+               
+               
             </div> 
-            <div className='flex items-center space-x-2'>
-            <div className='bg-[#E30325] w-[20px] h-[10px] relative'/>
-            <h1 className="font-bold text-[12px]">ADAMAWA STATE</h1>
-            </div>
-            <div className='flex items-center space-x-2'>
-                {adamawas.map((adamawa, index) => (
-                    <div className='space-x-2 text-center' key={index}>
-                    <p>{adamawa.political_party_name}</p>
-                    <p>{adamawa.candidate_votes}</p>
-                    </div>
-                ))}
-            </div>
-            <div className='flex items-center space-x-2'>
-            <div className='bg-[#449352] w-[20px] h-[10px] relative'/>
-            <h1 className="font-bold text-[12px] uppercase">anambra state</h1>
-            </div>
-            <div className='flex items-center space-x-2'>
-                {anambras.map((anambra, index) => (
-                    <div className='space-x-2 text-center' key={index}>
-                    <p>{anambra.political_party_name}</p>
-                    <p>{anambra.candidate_votes}</p>
-                    </div>
-                ))}
-            </div> 
-            <div className='flex items-center space-x-2'>
-            <div className='bg-[#449352] w-[20px] h-[10px] relative'/>
-            <h1 className="font-bold text-[12px] uppercase">Cross River state</h1>
-            </div>
-            <div className='flex items-center space-x-2'>
-                {crosss.map((cross, index) => (
-                    <div className='space-x-2 text-center' key={index}>
-                    <p>{cross.political_party_name}</p>
-                    <p>{cross.candidate_votes}</p>
-                    </div>
-                ))}
-            </div> 
-            <div className='flex items-center space-x-2'>
-            <div className='bg-[#449352] w-[20px] h-[10px] relative'/>
-            <h1 className="font-bold text-[12px] uppercase">Lagos state</h1>
-            </div>
-            <div className='flex items-center space-x-2'>
-                {lagoss.map((lagos, index) => (
-                    <div className='space-x-2 text-center'>
-                    <p>{lagos.political_party_name}</p>
-                    <p>{lagos.candidate_votes}</p>
-                    </div>
-                ))}
-            </div>
-            <div className='flex items-center space-x-2'>
-            <div className='bg-[#449352] w-[20px] h-[10px] relative'/>
-            <h1 className="font-bold text-[12px] uppercase">Rivers state</h1>
-            </div>  
-            <div className='flex items-center space-x-2'>
-                {riverss.map((river, index) => (
-                    <div className='space-x-2 text-center'key={index}>
-                    <p>{river.political_party_name}</p>
-                    <p>{river.candidate_votes}</p>
-                    </div>
-                ))}
-            </div>  
+           
+           
+           
+             
             </div>
             </div>
         </div>
