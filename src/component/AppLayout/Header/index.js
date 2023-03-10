@@ -80,12 +80,7 @@ useEffect(()=> {
             id=""
             className="m-10 w-[20%] py-2 px-3 bg-[#1C2031] text-[#C6C7CB] border border-gray-700"
           >
-            <option value="Pre-Election" className="border-none">
-              Pre-Election
-            </option>
-            <option value="Election Day Live Update" className="border-none">
-              Election Day Live Update
-            </option>
+
             <option value="Post-Election Analysis" className="border-none">
               Post-Election Analysis
             </option>
@@ -97,12 +92,6 @@ useEffect(()=> {
           >
             <option value="Presidential" className="border-none">
               Presidential
-            </option>
-            <option value="Senate" className="border-none">
-              Senate
-            </option>
-            <option value="House Of Representative" className="border-none">
-              House Of Representative
             </option>
           </select>
           <select

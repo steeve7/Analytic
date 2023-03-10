@@ -87,19 +87,14 @@ const Index = () => {
         <h1 className='text-[10px]'>Total Votes</h1>
         <p className='font-bold'>112,881</p>
         </div>
-        <div className='uppercase text-white text-center absolute mt-[-250px] ml-36'>
-        <h1 className='text-[10px]'>PDP votes</h1>
-        <p className='font-bold'>6,216</p>
+        <div className='uppercase text-white text-center absolute mt-[-250px] ml-32'>
+        <h1 className='text-[10px]'>other party votes</h1>
+        <p className='font-bold'>8,345</p>
         </div>
         <div className='uppercase text-white text-center absolute '>
-        <h1 className='text-[10px]'>LP Votes</h1>
+        <h1 className='text-[10px]'>leading party Votes</h1>
         <p className='font-bold'>104,453</p>
         </div>
-        <div className='uppercase text-white text-center absolute top-[1508px] left-40 '>
-        <h1 className='text-[10px]'>APC Votes</h1>
-        <p className='font-bold'>2,212</p>
-        </div>
-       
         </div>
         <div className='border border-gray-700 py-10 m-7 rounded-lg shadow-md px-10 w-[623px]'>
             <h1 className='text-white text-center uppercase font-[Poppins]'>Candidates by States</h1>

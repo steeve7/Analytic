@@ -92,13 +92,13 @@
         },
         {
             "state_name": "RIVERS",
-            "political_party_name": "All Progressives Congress",
-            "candidate_votes": 1
+            "political_party_name": "People's Democratic Party",
+            "candidate_votes": 5
         },
         {
             "state_name": "RIVERS",
-            "political_party_name": "People's Democratic Party",
-            "candidate_votes": 5
+            "political_party_name": "All Progressives Congress",
+            "candidate_votes": 1
         }
     ]
 }
